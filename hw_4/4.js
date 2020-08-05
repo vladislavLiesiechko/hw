@@ -3,22 +3,22 @@
 function calc(x, y, action) {
     switch (action) {
         case "+":
-            return console.log(x + y) ;
+            return (x + y) ;
             break;
         case "-":
-            return console.log(x - y);
+            return (x - y);
             break;
         case "*":
-            return console.log(x * y);
+            return (x * y);
             break;
         case "/":
-            return console.log(x / y);
+            return (x / y);
             break;
         case "%":
-            return console.log(x % y);
+            return (x % y);
             break;
         case "^":
-            return console.log(x ** y);
+            return (x ** y);
             break;
     }
 }

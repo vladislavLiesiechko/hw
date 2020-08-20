@@ -2,28 +2,20 @@
 
 
 function myFilter(array, callback) {
+    let newArray = [];
     for (let item = 0; item < array.length; item++) {
-
-        callback(array[item]);
-
+         let a = callback(array[item]);
+          if(a){
+               newArray.push(a);
+           }
     }
-    console.log(arr);
-
+    console.log(newArray);
 }
-let arr = new Array();
-
-
-
 function callback(item) {
-if(item % 2 === 0) {
-    arr.push(item);
+           return item > 10;
 }
 
-}
-
-let MyArray = [2, 5, 1, 0 , 36 ,9];
+let MyArray = [2, 5, 1, 36 ,12, 15];
 
 myFilter(MyArray, callback);
-
-
 

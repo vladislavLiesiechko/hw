@@ -1,22 +1,21 @@
 "use strict"
 
 
-function myEvery(array, callback) {
-    for (let item = 0; item < array.length; item++) {
-        callback(array[item]);
+function myEvery(arr, callback) {
+    for (let item = 0; item < arr.length; item++) {
+        if (callback(arr[item])) {
+            return false;
+        }
     }
+    return true;
 }
 
-function callback(item) {
 
-    if(item > 0) {
-        console.log(true);
-    }
-
-
+function callback (item) {
+    return item === "Andrew";
 }
-let arr = [-1, -10, 10, -12, -36 ,-5];
 
-myEvery(arr, callback);
-
+let newArray = ["John", "Alex"];
+let call  = myEvery(newArray, callback);
+console.log(call);
 

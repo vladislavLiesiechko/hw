@@ -15,7 +15,7 @@ function callback (item) {
     return item === "Andrew";
 }
 
-let newArray = ["John", "Alex"];
+let newArray = ["John", "Alex", "Andrew"];
 let call  = myEvery(newArray, callback);
 console.log(call);
 

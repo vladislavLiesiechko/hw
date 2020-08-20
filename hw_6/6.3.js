@@ -1,21 +1,20 @@
-'use strict'
+"use strict"
 
-
-function myFilter(array, callback) {
-    let newArray = [];
-    for (let item = 0; item < array.length; item++) {
-         let a = callback(array[item]);
-          if(a){
-               newArray.push(a);
-           }
+function mySome(arr, callback) {
+    for (let item = 0; item < arr.length; item++) {
+        let a = callback(arr[item]);
+        if (a) {
+            return true;
+        }
     }
-    console.log(newArray);
-}
-function callback(item) {
-           return item > 10;
+    return false;
 }
 
-let MyArray = [2, 5, 1, 36 ,12, 15];
 
-myFilter(MyArray, callback);
+function callback (item) {
+    return item === 5;
+}
 
+let newArray = [2, 5, 1];
+let a  = mySome(newArray, callback);
+console.log(a);

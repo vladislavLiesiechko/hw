@@ -2,27 +2,23 @@
 
 
 function myMap(array, callback) {
+    let newArray = [];
    for (let item = 0; item < array.length; item++) {
-
-      callback(array[item]);
+      let a = callback(array[item]);
+      newArray.push(a);
 
     }
-    console.log(arr);
+    console.log(newArray);
 
 
 }
-let arr = new Array();
-
-
 
 function callback(item) {
-
-  arr.push(item+10);
-
-
+    return item + 10;
 }
 
-let MyArray = [2, 5, 1, 0 , 36 ,9];
 
+    let MyArray = [2, 5, 1, 0 , 36 ,9, 7];
 myMap(MyArray, callback);
+
 

@@ -1,21 +1,20 @@
 "use strict"
 
+function mySome(arr, callback) {
+    for (let item = 0; item < arr.length; item++) {
 
-function mySome(array, callback) {
-    for (let item = 0; item < array.length; item++) {
-        callback(array[item]);
-
-    }
-}
-
-function callback(item) {
-
-        if(item % 2 !== 0) {
-            console.log(false);
+        if (callback(arr[item])) {
+            return true;
         }
-
+    }
+    return false;
 }
-let arr = [10,41,3 ,2];
 
-mySome(arr, callback);
 
+function callback (item) {
+    return item === 5;
+}
+
+let newArray = [2, 5, 1];
+let call  = mySome(newArray, callback);
+console.log(call);

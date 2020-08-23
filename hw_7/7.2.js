@@ -1,3 +1,5 @@
+"use strict"
+
 let usersAge1 = {
     Alex:"15yo",
     Ben:"23yo",

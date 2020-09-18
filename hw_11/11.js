@@ -1,3 +1,4 @@
+"use strict"
 const wrapper = document.querySelector("#wrapper");
 if (wrapper !== null) {
     const list = createList();
@@ -94,9 +95,8 @@ function createListItem(props) {
         }
     });
 
-
     const editBtn = createButton({
-        text: "Редактировать",
+        text: "Edit",
         className: "edit-btn",
     });
     element.appendChild(editBtn);
@@ -107,12 +107,7 @@ function createListItem(props) {
         element.appendChild(deleteBtn);
         element.appendChild(editBtn);
     });
-
-
-
-
     return element;
-
 }
 
 

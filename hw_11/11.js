@@ -3,7 +3,7 @@ const wrapper = document.querySelector("#wrapper");
 if (wrapper !== null) {
     const list = createList();
     const form = createForm((value) => {
-        const li = createListItem({ text: value });
+        const li = createListItem({text: value});
         list.appendChild(li);
     });
 
@@ -94,6 +94,7 @@ function createListItem(props) {
             return;
         }
     });
+
 
     const editBtn = createButton({
         text: "Edit",

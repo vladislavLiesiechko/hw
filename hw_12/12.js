@@ -55,7 +55,7 @@ function createList() {
         ul.appendChild(li);
         li.innerHTML = li.innerHTML + element;
 
-        wrapper.querySelector('.list').addEventListener('click', function (event) {
+        wrapper.querySelector('.list').addEventListener('click', (event)=> {
             let click = wrapper.querySelector(' .click');
             if (click) {
                 click.classList.remove('click');

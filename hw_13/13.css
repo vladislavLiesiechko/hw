@@ -1,0 +1,27 @@
+.wrapper{
+    text-align: center;
+    font-family: sans-serif;
+
+
+}
+form{
+    width: 200px;
+
+
+}
+input{
+    margin: 20px;
+}
+
+fieldset{
+    margin: 20px;
+
+
+}
+.submit{
+    margin: 0 10px 0 70px;
+}
+
+.invalid{
+    background: red;
+}

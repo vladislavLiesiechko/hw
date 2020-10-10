@@ -21,7 +21,7 @@ Unit.prototype.restore = function () {
     return this.health;
 }
 
-Unit.prototype.clone = function (unit) {
+Unit.prototype.clone = function () {
     return new Unit(this.type, this.health, this.maxHealth, this.maxDistance);
 }
 
